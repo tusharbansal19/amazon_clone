@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cc</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="cc.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-decoration: underline;">Currency convertor</h1>
+        <p class="pp" style="color: red;">Here you check different currency amounts of  countries8hjy </p>
+        <div class="dp">Currency current prise from other countries</div>
+        <input type="text" placeholder="Enter Amount " class="inp" >
+        <div class="convertor">
+
+            <div class="to">
+                <h4>TO
+                </h4>
+                <img id="from1" src="https://flagsapi.com/US/flat/64.png"; alt="">
+                <select pk="USD"  id="to" class="slt">
+                    <option value="INR">INR</option>
+                    <option value="USD" selected >USD</option>
+                </select>
+                
+                
+            </div>
+            <i class="fa-regular fa-arrows-left-right" id="icon"></i>
+            <div class="to">
+                <h3>From</h3>
+                <img src="https://flagsapi.com/IN/flat/64.png"; alt="" id="to1">
+                <select name="INR" id="from" class="slt">
+                    <option value="INR"  selected>INR</option>
+                    <option value="USD" >USD</option>
+                </select>
+            </div>
+        </div>
+        <button class="inp" 
+        id="btn" >Start CONVERSION</button>
+        <div id="op">
+        <h3 id="rt">The rate of this conversion is </h3>
+        <h1 id="mp">Ammount is</h1>
+        </div>
+        </div>
+        <script src="cc1.js"></script>
+    <script src="cc.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dv">
+
+        <input type="checkbox" id="check" class="ch" value="2">
+        <button id="btn"> click</button>
+        
+    </div>
+    
+    <script>
+    
+    let check=document.getElementById("check");
+
+    let btn=document.getElementById("btn")
+    let dv=document.getElementById("dv")
+    
+    
+    btn.addEventListener("click",()=>{
+        if(check.checked){
+
+            console.log(check.value)
+        }
+        else{
+            console.log(0)
+        }
+        
+    
+        
+    })
+    </script>
+</body>
+</html>

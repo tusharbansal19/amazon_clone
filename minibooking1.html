@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>booking</title>
+    </head>
+    <body>
+        <style>
+            body{
+               
+                background-image: url("dr5.jpg");
+                display: flex;
+        
+                background-size: cover;
+                flex-wrap: nowrap;
+            }
+            .box{
+            
+                width: 70vw;
+                height: 100vw;
+
+            
+                backdrop-filter: blur(20px);
+                background-color: rgba(255, 255, 255, 0.398);display: flex;
+                flex-wrap: wrap;
+            
+                align-items: center;
+                
+                justify-content: center;
+                border-radius: 20PX;
+            
+    
+            }
+            .box2{
+                
+            
+                margin: 50px;
+                
+            }
+            input{
+                backdrop-filter: blur(20px);
+                background-color: rgba(255, 255, 255, 0.011);
+                height: 30px;
+                width: 200px;
+                border-radius: 5px;
+    
+    
+                border: 0px;
+               
+                box-shadow:  -2px -2px rgba(236, 235, 235, 0.265);
+    
+                
+            }
+            .bx{
+                backdrop-filter: blur(20px);
+                background-color: rgba(177, 194, 214, 0.276);
+                height: 50px;
+                width: 200px;
+                margin: 40px 40px ;
+                border-radius: 5px;
+    
+    
+                border: 0px;
+               
+                box-shadow:  -2px -2px rgba(236, 235, 235, 0.265);
+
+            }
+            input:focus{
+                border: 2px solid rgba(212, 195, 195, 0.971);
+                backdrop-filter: blur(20px);
+                background-color: rgba(212, 148, 118, 0.405);
+    
+            }
+        </style>
+    
+        <div class="box">
+    
+            <H1 style="text-decoration: underline; margin:0,200px">Booking Here !</H1>
+         
+           <div class="box2" >
+
+               <h3>Costumer Name</h3>  
+            
+               <input type="text" placeholder="Enter Your Name" value="" class="inp">
+               
+                   
+                   <h3>Mobile Number</h3>
+                   
+                   <input type="text" placeholder="Enter Your Mobie Number" value="" class="inp">
+                </div>
+    <select class="form-select-lg bx"  >
+        
+        <option> Parking <option>
+            <option>Ground Parking : Free</option>
+            <option>Underground Parking : Rs 200</option>
+            <option>Garage Block Parking : Rs 150</option>
+        </select>
+        
+        
+        <select class="form-select-lg bx"  >
+                <option> Room Size<option>
+                <option>Single Bed Room (price): Rs. 1000</option>
+                <option>Double Bed Room (price): Rs. 2000</option>
+                <option>Multi Bed Room (price): Rs. 3000</option>
+            </select>
+            
+            
+            <select class="form-select-lg bx"  >
+                <option> Games & others<option>
+                    <option>Swimming Pool (price): Rs. 350</option>
+                <option>Indoor Gyms  (price): Rs. 500</option>
+                <option>Indoor Games (price): Rs. 300</option>
+              </select>
+
+
+              
+        
+
+
+            
+            <button style="background-color: rgba(181, 76, 93, 0.405);border-radius:5px; width:200px;height:30px;margin:12px 0 13px 0">Submit</button>
+        </div>
+        <script>
+            let bx;
+            
+            let x=document.querySelectorAll(".inp")[0].value;
+            let y=document.querySelectorAll(".inp")[1].value;
+            let ps=document.querySelector("#ps").value;
+            let bt=document.querySelector("button");
+            bt.addEventListener("click",()=>{
+                console.log(x,y,ps)
+                if(x!=""&&y!=""&&ps!=""){
+                     bx=document.querySelector(".box");
+                    bx.innerHTML="Registration SucessfuLL !";
+                    x="";
+                    y="";
+                    ps="";
+                     
+                    
+                }
+                else{
+                    if(x){
+                        document.querySelectorAll(".inp")[0].style.background="E49598";
+    
+                    }
+                    else{
+                        document.querySelectorAll(".inp")[0].style.background="C9F9B8";
+    
+                    }
+                    if(y){
+                        document.querySelectorAll(".inp")[1].style.background="E49598";
+                        
+            
+                            }
+                            else{
+                                document.querySelectorAll(".inp")[0].style.background="C9F9B8";
+    
+                            }
+                            if(ps){
+                                document.querySelector("#ps").style.background="E49598";
+                            }
+                            else{
+                                document.querySelector("#ps").style.background="C9F9B8";
+                            }
+    
+                }
+    
+                
+            })
+    
+    
+    
+        </script>
+         
+        
+    </body>
+    </html>    

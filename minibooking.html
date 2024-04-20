@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+</head>
+<body>
+    <style>
+        body{
+           
+            background-image: url("door.jpeg");
+            display: flex;
+            justify-content: center;
+            background-size: cover;
+        }
+        #box{
+            width: 50vw;
+            backdrop-filter: blur(20px);
+            background-color: rgba(255, 255, 255, 0.398);display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            
+            justify-content: center;
+            border-radius: 20PX;
+        
+
+        }
+        .sucess{
+            height: 30px;
+            width: 200px;
+            position:sticky;
+            right: 10px;
+            top: 22px;
+            z-index: 3;
+            font-size: 20px;
+            border-radius: 7px;
+            color: green;
+            background-color: white;
+        }
+        input{
+            backdrop-filter: blur(20px);
+            background-color: rgba(255, 255, 255, 0.011);
+            height: 30px;
+            width: 200px;
+            border-radius: 5px;
+
+
+            border: 0px;
+           
+            box-shadow:  -2px -2px rgba(236, 235, 235, 0.265);
+
+            
+        }
+        .inp{
+        backdrop-filter: blur(20px);
+        background-color: rgba(255, 255, 255, 0.011);
+        height: 70px;
+        width: 222px;
+        border-radius: 5px;
+
+
+        border: 0px;
+       
+        box-shadow:  -2px -2px rgba(236, 235, 235, 0.265);}
+        .inp1{
+            backdrop-filter: blur(20px);
+            background-color: rgba(255, 255, 255, 0.011);
+            height: 20px;
+            width: 20px;
+            border-radius: 5px;
+    
+    
+            border: 0px;
+           
+            box-shadow:  -2px -2px rgba(236, 235, 235, 0.265);}
+
+        input:focus{
+            border: 2px solid rgba(212, 195, 195, 0.971);
+            backdrop-filter: blur(20px);
+            background-color: rgba(212, 148, 118, 0.405);
+
+        }
+        .h1{
+            margin: 4px 15vw;
+        }
+        .h3{
+            margin: 10px 23vw 0px .42vw;
+            height: 50px;
+        }
+        .boxarange{
+            width: 40vw;
+            margin: 0px 15vw 20px 5vw;
+        }
+        #bill{
+            height: 500px;
+            width: 300px;
+            border-radius: 10px;
+            background-color:rgba(255, 255, 255, 0.363);
+            backdrop-filter: blur(20px);
+            box-shadow: -3px -3px black;
+        
+            z-index: 5;
+            color: green;
+    top: 90vh;
+            position:absolute;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            display: none;
+            
+            
+            align-items: center;
+        }
+        #bh2{
+            text-decoration:underline;
+            text-align: center;
+            color: rgb(63, 19, 152);
+            margin: 0px 20px ;
+          
+
+        }
+       table,th,td{
+
+            border: 1px
+            solid black;
+        }
+        table{
+
+            
+            margin:10px 30px;
+            
+        }
+        #bbtn{
+            height: 50px;
+            width: 200px;
+            background-color: rgb(76, 219, 157);
+
+            border-radius: 20px;
+
+        }
+        #cbtn{
+            background-color: red;
+            margin: 1px;
+
+            color: white;
+
+            height: 50px;
+            width: 70px;
+            border-radius: 20px;
+
+        }
+
+       
+
+    </style>
+    
+    <div id="bill">
+        
+        <h2 id="bh2">Payment Now</h2>
+        <br>
+        <p><i style="margin-left:40px;
+            margin-right:40px;color:darkcyan">Thanks For visiting</i></p>
+      
+        
+        
+        <p>User:<i id="tname" style="margin-right:30px; color:rgb(221, 48, 25);text-decoration:underline"></i></p>
+        <p>M.no.<i id="tpass" style=" color:rgb(228, 16, 8);text-decoration:underline"></i></p>
+        
+        <table >
+            
+            <tr>
+                <th>Facility</th>
+                <th>Price</th>
+                
+            </tr>
+            <tr>
+                <td>Room Price</td>
+                <td class="tr1">M</td>
+                
+              </tr>
+              <tr>
+                  <td>Meel Price</td>
+                  <td >Rs.400</td>
+                  
+                </tr>
+                <tr>
+                    <td>Parking Price</td>
+                    <td class="tr1">Maria Anders</td>
+                    
+              </tr>
+              <tr>
+                  <td>Swimming pool price</td>
+                  <td class="tr1">0</td>
+                  
+                </tr>
+                <tr>
+                    <td>Indoor Games price</td>
+                    <td class="tr1">0</td>
+                    
+                </tr>
+              <tr>
+                  <td>Indoor Gym price</td>
+                  <td class="tr1">0</td>
+                  
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td class="tr1">0</td>
+                    
+                  </tr>
+
+            </table>
+            <button id="bbtn">
+                pay
+            </button>
+            <button id="cbtn">Cancel</button>
+            
+        </div>
+        <div id="box">
+        
+        <H1 class="h1"; style="text-decoration: underline; ">Booking Here</H1>
+        
+        <h3 class="h3">Person Name</h3>  
+        <input type="text" placeholder="Enter Your Name" value="" class=" boxarange" id="name">
+        <h3 class="h3">Phone Number</h3>
+        <input type="text" placeholder="Enter Your Phone Number" value="" class=" boxarange " id="pass">
+        
+        
+        <div class="box2">
+            <h3 class="h3">Rooms choose</h3>
+            <select name="cars" id="room" size="3" class="inp vd"  >
+                <option value="1000">Single Bed Room</option>
+                <option value="1500">Double Bed Room</option>
+                <option value="2000">Multi Bed Room</option>
+                
+            </select>
+            <h3 class="h3">Parkings</h3>
+            <select name="cars" id="park" size="3" class="inp vd">
+                <option value="0">Ground Parkings</option>
+                <option value="250">Underground Parkings</option>
+                <option value="300">Block Garage Parkings</option>
+                
+            </select>
+                <h3 class="h3">Date and Time</h3>
+                <input type="datetime-local"  id="date" class="inp" >
+                <h3 class="h3">
+                    <input type="checkbox" class="inp1 vd" id="swim" value="300" >
+                    Siwimming Pool
+
+                </h3>
+                <h3 class="h3">
+                    <input type="checkbox" class="inp1 vd" id="indor" value="250" >
+                    Indoor Games</h3>
+                    <h3 class="h3">
+                        <input type="checkbox" class="inp1 vd"    id="gym" value="200" >
+                        Indoor Gyms</h3>
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                    <button id="button"
+                    style="background-color: rgba(181, 76, 93, 0.405);border-radius:5px; width:200px;height:30px;margin:12px 0 13px 0">Submit</button>
+                </div>
+                
+                
+                <script>
+                
+                    
+                    
+                    
+                    var f1=0;
+                    
+                    let btn=document.querySelector("#button");
+                    btn.addEventListener("click",()=>{
+                    
+                        let tr=document.getElementsByClassName("tr1");
+                        let vd=document.getElementsByClassName("vd");
+                                
+                                
+                        let name=document.querySelector("#name");
+                        let pass=document.querySelector("#pass");
+                        
+                        let box=document.querySelector("#box");
+                        
+                        let swim=document.querySelector("#swim");
+                        let indor=document.querySelector("#indor");
+                        let gym=document.querySelector("#gym");
+                        let park=document.querySelector("#park");
+                        let room=document.querySelector("#room");
+                        
+                        
+                        let date=document.querySelector("#date");
+
+                        if(vd[2].checked){
+                            tr[2].innerHTML=vd[2].value;
+                        }
+                        
+                        
+                        
+                        
+                                                            for(let i=0;i<5;i++){
+                                                                if(i<2){
+
+                                                                    tr[i].innerHTML="Rs."+vd[i].value;
+                                                                }
+                                                                else{
+
+                                                                    if(vd[i].checked){
+                                                                        tr[i].innerHTML="Rs."+vd[i].value;
+                                                                    }
+                                                                    else{
+                                                                        tr[i].innerHTML="Rs.0.0";
+
+                                                                    }
+                                                                    
+                                                                }
+                                                                
+                                                            }
+                let total=400;
+                for(let i=0;i<5;i++){
+
+                    if(i<2){
+
+                        total=total+parseInt(vd[i].value);
+                    }
+                    else{
+                        if(vd[i].checked){
+                            total=total+parseInt(vd[i].value);
+
+                        }
+                        else{
+                            total=total+0;
+                        }
+                    }
+
+
+                }
+
+                tr[5].innerHTML="Rs."+total;
+                    
+            if(name.value.length>4 && name.value.length<16){
+                f1=1;
+                name.style.color="black"
+            }
+            else{
+                f1=0;
+                name.style.color="red";
+                name.value="Incorrect Name ";
+            }
+             
+            if(room.value.length>2 ){
+                f1=1;
+                room.style.color="black"
+            }
+            else{
+                f1=0;
+                room.color="red";
+                room.value="Incorrect Name ";
+            }
+            if(pass.value.length>4 && pass.value.length<16){
+                f1=1;
+                pass.style.color="black"
+            }
+            else{
+                f1=0;
+                pass.style.color="red";
+                pass.value=" Incorrect Account";
+            }
+           
+            if(f1==1){
+                let dte=new Date();
+                console.log(dte.getFullYear())
+                console.log(dte.getMonth())
+                console.log(dte.getDate())
+                console.log(dte.getDay())
+                
+                
+                
+                console.log("sucessfull")
+                
+                let x=document.createElement("div")
+                let c="Payment for Booking."
+                x.classList="sucess";
+            
+                if(room.value.length>2){
+                    c=c+" price room  "+room.value
+                        
+                    }
+                    if(swim.value.length>1){
+                        c=c+"...price swim.... "+swim.value
+                            
+                        }
+                        if(indor.value.length>1){
+                            c=c+"...price indoor.... "+indor.value
+                                
+                            }
+                            if(park.value.length>1){
+                                c=c+"...park room.... "+park.value
+                                    
+                                }  if(gym.value.length>1){
+                                    c=c+"...price gym... "+gym.value
+                                        
+                                    }
+                                    x.innerHTML=c;
+                                    let tname=document.querySelector("#tname");
+                                    let tpass=document.querySelector("#tpass");
+                                    tname.innerHTML=name.value
+                                    tpass.innerHTML=pass.value
+
+
+
+
+
+
+
+
+                                    
+                                    let pay=document.querySelector("#bill");
+                                    pay.style.display="flex";
+                                    let dtee=document.querySelector("#dtee");
+                                    let d=new Date();
+                                    let cbtn=document.querySelector("#cbtn")
+                                    cbtn.addEventListener("click",()=>{
+                                        pay.style.display="none";
+
+                                    })
+
+
+                                    
+                                    
+                                    
+                                }
+                                else{
+                                    console.log("Reject")
+                                    name.value="";
+                                    pass.value="";
+
+                    
+                
+            }
+            
+            
+        })
+        
+        
+        
+        name.addEventListener("click",()=>{
+            name.value="";
+        })
+      
+        pass.addEventListener("click",()=>{
+            pass.value="";
+        })
+
+
+
+
+
+
+        
+
+
+
+    </script>
+     
+    
+</body>
+</html>

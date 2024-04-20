@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>button click karke dikhyo</title>
+</head>
+<body>
+    <style>
+        #btn{
+            height: 30px;
+            width: 160px;
+
+            transition: all 0.5s;
+            background-color: aqua;
+        }
+        #inp:hover{
+            background-color: aqua;
+        }
+      
+
+
+
+    </style>
+    <h2>apni gf ka nam lik</h2>
+    <input type="text" value ="" placeholder="yaah par" id="inp">
+    <br>
+    <button id="btn" onclick="bc()">daba</button>
+</body>
+    <script>
+        let inp=document.querySelector("#inp");
+        let btn=document.querySelector("#btn");
+        function bc(){
+            console.log("red");
+            btn.style.background="red";
+        }
+
+
+
+
+
+    </script>
+    
+</html>

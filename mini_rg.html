@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+</head>
+<body>
+    <style>
+        body{
+           
+            background-image: url("dr5.jpg");
+            display: flex;
+            justify-content: center;
+            background-size: cover;
+        }
+        #box{
+            width: 250px;
+            height: 450px;
+            backdrop-filter: blur(20px);
+            background-color: rgba(255, 255, 255, 0.398);display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            
+            justify-content: center;
+            border-radius: 20PX;
+        
+
+        }
+        .sucess{
+            height: 70px;
+            width: 200px;
+            position:absolute;
+            z-index: 3;
+            font-size: 30px;
+            border-radius: 7px;
+            color: green;
+            background-color: white;
+        }
+        input{
+            backdrop-filter: blur(20px);
+            background-color: rgba(255, 255, 255, 0.011);
+            height: 30px;
+            width: 200px;
+            border-radius: 5px;
+
+
+            border: 0px;
+           
+            box-shadow:  -2px -2px rgba(236, 235, 235, 0.265);
+
+            
+        }
+        input:focus{
+            border: 2px solid rgba(212, 195, 195, 0.971);
+            backdrop-filter: blur(20px);
+            background-color: rgba(212, 148, 118, 0.405);
+
+        }
+    </style>
+
+    <div id="box">
+
+        <H1 style="text-decoration: underline;">Sign in Here !</H1>
+        <h3>User Name</h3>  
+        <input type="text" placeholder="Enter Your Name" value="" class="inp" id="name">
+<h3>Account</h3>
+        <input type="text" placeholder="Enter Your IDs" value="" class="inp" id="pass">
+        <h3> Password</h3>
+        
+        <input type="password" placeholder="Enter Your password" value="" id="pass1" >
+        <button id="button"
+         style="background-color: rgba(181, 76, 93, 0.405);border-radius:5px; width:200px;height:30px;margin:12px 0 13px 0">Submit</button>
+    </div>
+    <script>
+        let name=document.querySelector("#name");
+        let pass=document.querySelector("#pass");
+        let pass1=document.querySelector("#pass1");
+        let box=document.querySelector("#box");
+
+        let btn=document.querySelector("#button");
+        var f=0;
+        btn.addEventListener("click",()=>{
+            let s="";
+            s=name.value;
+            let f1=1;
+        
+            for(let i=0;i<s.length;i++){
+                if(s[i]<='z'&&s[i]>='a'||s[i]<="Z"&&s[i]>="A"||s[i]==" "){
+                f1=1
+                }
+                else{
+                f1=0;
+                break;
+                }
+
+            }
+            let c1=1;
+
+            if(name.value.length>4 && name.value.length<16&&f1==1){
+                c1=1;
+                name.style.color="black"
+            }
+            else{
+                c1=0;
+                name.style.color="red";
+                name.value="Incorrect Name ";
+            }
+            s=pass.value;
+             f1=1;
+             if(s.indexOf("@gmail.com") == -1){
+                f1=0;
+             }
+             let c2=1;
+        
+            if(pass.value.length>9 && pass.value.length<30&&f1==1){
+                c2=1;
+                pass.style.color="black"
+            }
+            else{
+                c2=0;
+                pass.style.color="red";
+                pass.value=" Incorrect Account";
+            }
+            s=pass.value;
+            f1=1;
+            if(s.indexOf("@gmail.com") == -1){
+               f1=0;
+            }
+          let c3=1;
+
+
+
+            if(pass1.value.length>4 && pass.value.length<30){
+                c3=1;
+                pass1.style.color="black"
+            }
+            else{
+                c3=0;
+                pass1.style.color="red";
+                pass1.value="Incorrect password";
+            }
+            if(c1==1&&c2==1&&c3==1){
+                console.log("sucessfull")
+                
+                let x=document.createElement("div")
+                x.innerHTML="SucessfuLL Register"
+                x.classList="sucess";
+                name.value="";
+                pass.value="";
+                pass1.value="";
+                box.before(x);
+                setTimeout(()=>{
+                    document.
+                    body.removeChild(x);
+                },2000);
+
+              
+
+
+                
+            }
+            else{
+                    console.log("Reject")
+
+                    
+                
+            }
+            
+            
+        })
+        
+        
+        
+        name.addEventListener("click",()=>{
+            name.value="";
+        })
+        pass1.addEventListener("click",()=>{
+            pass1.value="";
+        })
+        pass.addEventListener("click",()=>{
+            pass.value="";
+        })
+
+
+
+    </script>
+     
+    
+</body>
+</html>
